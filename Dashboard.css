@@ -1,0 +1,157 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+}
+
+#main-content {
+    flex: 1 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#header .navbar-brand {
+    color: white;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.animate-card {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.animate-form {
+    animation: slideIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #main-content {
+        padding: 10px;
+    }
+}
+
+/* Modal background fade */
+.modal.fade .modal-dialog {
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Modal header */
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Close button styling */
+.btn-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    color: #ddd;
+}
+
+/* Modal body */
+.modal-body p {
+    margin: 0 0 10px;
+    font-size: 1rem;
+}
+
+.modal-body p strong {
+    color: #343a40;
+}
+
+/* Modal footer */
+.modal-footer {
+    border-top: 1px solid #e9ecef;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.actions-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.actions-column form {
+    display: inline-block;
+    margin: 0;
+}
+
+.actions-column .btn {
+    width: 100px;
+    text-align: center;
+}
